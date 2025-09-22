@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adeslas SegurCaixa Product Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "marked": "https://aistudiocdn.com/marked@^13.0.2"
+  }
+}
+</script>
+  <style>
+    /* Custom scrollbar for a minimalist look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f9fafb; /* gray-50 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3b82f6; /* blue-500 */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2563eb; /* blue-600 */
+    }
+
+    /* Prose styles for rendered markdown in chatbot */
+    .prose-styles p {
+        margin-bottom: 0.5rem;
+    }
+    .prose-styles strong {
+        font-weight: 600; /* semibold */
+    }
+    .prose-styles ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .prose-styles ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .prose-styles li {
+        margin-bottom: 0.25rem;
+    }
+    .prose-styles p:last-child {
+        margin-bottom: 0;
+    }
+
+    @keyframes slide-up {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .animate-slide-up {
+      animation: slide-up 0.3s ease-out forwards;
+    }
+    
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.2s ease-out forwards;
+    }
+  </style>
+</head>
+  <body class="bg-gray-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
